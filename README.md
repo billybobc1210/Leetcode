@@ -1,5 +1,5 @@
 This repository is intended to contain a collection of solutions to various
-Leetcode problem solutions using Java, Kotlin and Python (maybe other languages will
+Leetcode problems using Java, Kotlin and Python (maybe other languages will
 be added later).  
 
 Current problem solutions:
