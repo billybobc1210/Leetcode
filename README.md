@@ -1,4 +1,4 @@
-This repository is intended to contain a collection solutions to various
+This repository is intended to contain a collection of solutions to various
 Leetcode problem solutions using Java, Kotlin and Python (maybe other languages will
 be added later).  
 
