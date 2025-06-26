@@ -1,5 +1,14 @@
 package problem21
 
+/*
+Leetcode Problem 21
+
+https://leetcode.com/problems/merge-two-sorted-lists/description/
+
+Problem statement:
+
+Merge two sorted linked list into single sorted linked list
+ */
 class Solution {
     fun mergeTwoLists(list1: ListNode?, list2: ListNode?): ListNode? {
         var result: ListNode? = null
