@@ -10,3 +10,10 @@ Current problem solutions:
 Link: https://leetcode.com/problems/longest-substring-without-repeating-characters/description/
 
 Solution: python-module/src/Problem3.py
+
+## Kotlin
+### Problem 21 - Merge two sorted linked list into single sorted linked list
+
+Link: https://leetcode.com/problems/merge-two-sorted-lists/description/
+
+Solution: src/problem21/Solution.kt
