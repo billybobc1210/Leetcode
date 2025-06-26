@@ -12,7 +12,7 @@ Link: https://leetcode.com/problems/longest-substring-without-repeating-characte
 Solution: python-module/src/Problem3.py
 
 ## Kotlin
-### Problem 21 - Merge two sorted linked list into single sorted linked list
+### Problem 21 - Merge two sorted linked lists into single sorted linked list
 
 Link: https://leetcode.com/problems/merge-two-sorted-lists/description/
 
