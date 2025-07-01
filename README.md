@@ -23,3 +23,10 @@ Solution: python-module/src/Problem23.py
 Link: https://leetcode.com/problems/merge-two-sorted-lists/description/
 
 Solution: src/problem21/Solution.kt
+
+## Java
+### Problem 2 - Add two positive integers represented as linked lists and return result as linked list
+
+Link: https://leetcode.com/problems/add-two-numbers/description/
+
+Solution: src/problem2/Solution.java
