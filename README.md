@@ -15,6 +15,8 @@ Solution: python-module/src/Problem3.py
 
 https://leetcode.com/problems/merge-k-sorted-lists/description/
 
+Solution: python-module/src/Problem23.py
+
 ## Kotlin
 ### Problem 21 - Merge two sorted linked lists into single sorted linked list
 
