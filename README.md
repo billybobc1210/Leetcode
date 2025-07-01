@@ -11,6 +11,10 @@ Link: https://leetcode.com/problems/longest-substring-without-repeating-characte
 
 Solution: python-module/src/Problem3.py
 
+### Problem 23 - You are given an array of k linked-lists lists, each linked-list is sorted in ascending order.  Merge all the linked-lists into one sorted linked-list and return it.
+
+https://leetcode.com/problems/merge-k-sorted-lists/description/
+
 ## Kotlin
 ### Problem 21 - Merge two sorted linked lists into single sorted linked list
 
