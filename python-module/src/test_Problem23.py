@@ -12,9 +12,9 @@ class TestSolution(TestCase):
         ]
 
         solution = Solution()
-        merged_list = solution.mergeKLists(lists)
-        expected_merged_list = self.convert_array_to_list([1,1,2,3,4,4,5,6])
-        self.assert_lists_match(expected_merged_list, merged_list)
+        actual = solution.mergeKLists(lists)
+        expected = self.convert_array_to_list([1,1,2,3,4,4,5,6])
+        self.assert_lists_match(expected, actual)
 
     def test_merge_klists_2(self):
         lists = [
@@ -24,9 +24,9 @@ class TestSolution(TestCase):
         ]
 
         solution = Solution()
-        merged_list = solution.mergeKLists(lists)
-        expected_merged_list = self.convert_array_to_list([1,1,2,3,4,4,5])
-        self.assert_lists_match(expected_merged_list, merged_list)
+        actual = solution.mergeKLists(lists)
+        expected = self.convert_array_to_list([1,1,2,3,4,4,5])
+        self.assert_lists_match(expected, actual)
 
     def test_merge_klists_3(self):
         lists = [
@@ -40,17 +40,17 @@ class TestSolution(TestCase):
         ]
 
         solution = Solution()
-        merged_list = solution.mergeKLists(lists)
-        expected_merged_list = self.convert_array_to_list([1,1,1,2,3,4,10,10,17,20,30,40,50,50,60,100,100,200,300,400,500,600,700,800,900,1000,1000,1000,3000])
-        self.assert_lists_match(expected_merged_list, merged_list)
+        actual = solution.mergeKLists(lists)
+        expected = self.convert_array_to_list([1,1,1,2,3,4,10,10,17,20,30,40,50,50,60,100,100,200,300,400,500,600,700,800,900,1000,1000,1000,3000])
+        self.assert_lists_match(expected, actual)
 
     def test_merge_klists_4(self):
         lists = []
 
         solution = Solution()
-        merged_list = solution.mergeKLists(lists)
-        expected_merged_list = self.convert_array_to_list([])
-        self.assert_lists_match(expected_merged_list, merged_list)
+        actual = solution.mergeKLists(lists)
+        expected = self.convert_array_to_list([])
+        self.assert_lists_match(expected, actual)
 
     def convert_array_to_list(self, values):
         """
