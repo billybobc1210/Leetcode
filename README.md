@@ -30,3 +30,9 @@ Solution: src/problem21/Solution.kt
 Link: https://leetcode.com/problems/add-two-numbers/description/
 
 Solution: src/problem2/Solution.java
+
+### Problem 70 - You are climbing a staircase. It takes n steps to reach the top.  Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top?
+
+Link: https://leetcode.com/problems/climbing-stairs/description/
+
+Solution: src/problem70/Solution.java
