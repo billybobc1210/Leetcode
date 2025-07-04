@@ -15,7 +15,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 class Solution {
-//    private static final int[] POSSIBLE_STEP_SIZES = new int[] { 1, 2 };
+    private static final int[] POSSIBLE_STEP_SIZES = new int[] { 1, 2 };
     private static final Map<Integer, Integer> fibonacciMap = new HashMap<>();
     private static int maxInitializedFibonacci = 2;
     static {
@@ -24,18 +24,14 @@ class Solution {
     }
 
     public int climbStairs(int n) {
-        return climbRemainingStairs(n);
-    }
-
-    private int climbRemainingStairs(int stepsRemaining) {
-        if (stepsRemaining >= 1) {
-            Integer result = fibonacciMap.get(stepsRemaining);
+        if (n >= 1) {
+            Integer result = fibonacciMap.get(n);
 
             if (result == null) {
-                for (int i = maxInitializedFibonacci + 1; i <= stepsRemaining; i++) {
+                for (int i = maxInitializedFibonacci + 1; i <= n; i++) {
                     result = fibonacciMap.get(i-1) + fibonacciMap.get(i-2);
                     fibonacciMap.put(i, result);
-                    maxInitializedFibonacci = stepsRemaining;
+                    maxInitializedFibonacci = n;
                 }
             }
 
@@ -47,18 +43,18 @@ class Solution {
 
 /*
  *    Recursive solution that gave correct results but failed due to Time Limit Exceeded
-*/
-//    private int climbRemainingStairs(int stepsRemaining) {
+ */
+//    public int climbStairs(int n) {
 //        int result = 0;
 //
 //        for (int nextStepSize : POSSIBLE_STEP_SIZES) {
-//            int stepsRemainingAfterNextStep = stepsRemaining - nextStepSize;
+//            int stepsRemainingAfterNextStep = n - nextStepSize;
 //
 //            if (stepsRemainingAfterNextStep == 0) {
 //                result++;
 //                break;
 //            } else if (stepsRemainingAfterNextStep > 0) {
-//                result += climbRemainingStairs(stepsRemainingAfterNextStep);
+//                result += climbStairs(stepsRemainingAfterNextStep);
 //            }
 //        }
 //
@@ -69,14 +65,13 @@ class Solution {
  *    Another recursive solution (for getting fibonacci numbers) that gave correct results but failed
  *    due to Time Limit Exceeded
  */
-//    private int climbRemainingStairs(int stepsRemaining) {
-//        if (stepsRemaining == 1) {
+//    public int climbStairs(int n) {
+//        if (n == 1) {
 //            return 1;
-//        } else if (stepsRemaining == 2) {
+//        } else if (n == 2) {
 //            return 2;
 //        } else {
-//            return climbRemainingStairs(stepsRemaining - 1) +
-//                   climbRemainingStairs(stepsRemaining - 2);
+//            return climbStairs(n - 1) + climbStairs(n - 2);
 //        }
 //    }
 }
