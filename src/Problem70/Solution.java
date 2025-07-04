@@ -15,7 +15,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 class Solution {
-//    private static final int[] POSSIBLE_STEP_SIZES = new int[] { 1, 2 };
     private static final Map<Integer, Integer> fibonacciMap = new HashMap<>();
     private static int maxInitializedFibonacci = 2;
     static {
@@ -44,6 +43,8 @@ class Solution {
 /*
  *    Recursive solution that gave correct results but failed due to Time Limit Exceeded
  */
+//    private static final int[] POSSIBLE_STEP_SIZES = new int[] { 1, 2 };
+//
 //    public int climbStairs(int n) {
 //        int result = 0;
 //
