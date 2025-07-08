@@ -250,4 +250,18 @@ public class SolutionTest {
         int actual = s.myAtoi("-789838291583958369378512739853285319855389589");
         assertEquals(Integer.MIN_VALUE, actual);
     }
+
+    @Test
+    public void test36() {
+        Solution s = new Solution();
+        int actual = s.myAtoi("     x1234");
+        assertEquals(0, actual);
+    }
+
+    @Test
+    public void test37() {
+        Solution s = new Solution();
+        int actual = s.myAtoi("     x-1234");
+        assertEquals(0, actual);
+    }
 }
