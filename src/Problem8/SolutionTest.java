@@ -236,4 +236,18 @@ public class SolutionTest {
         int actual = s.myAtoi("0000000000012345678");
         assertEquals(12345678, actual);
     }
+
+    @Test
+    public void test34() {
+        Solution s = new Solution();
+        int actual = s.myAtoi("789838291583958369378512739853285319855389589");
+        assertEquals(Integer.MAX_VALUE, actual);
+    }
+
+    @Test
+    public void test35() {
+        Solution s = new Solution();
+        int actual = s.myAtoi("-789838291583958369378512739853285319855389589");
+        assertEquals(Integer.MIN_VALUE, actual);
+    }
 }

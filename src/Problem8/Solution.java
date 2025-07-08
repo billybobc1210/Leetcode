@@ -2,7 +2,7 @@ package Problem8;
 
 class Solution {
     public int myAtoi(String s) {
-        int result = 0;
+        long result = 0;
 
         StringBuffer validDigits = new StringBuffer();
         boolean foundFirstDigit = false;
@@ -39,39 +39,24 @@ class Solution {
             digits = "0";
         }
 
-        int overflowResult = Integer.MAX_VALUE;
-        String overflowResultDigits = Integer.toString(overflowResult);
+        long placeMultiplier = 1;
 
-        if (sign == -1) {
-            overflowResult = Integer.MIN_VALUE;
-            overflowResultDigits = Integer.toString(overflowResult).substring(1);
-        }
+        for (int i = digits.length() - 1; i >= 0; i--) {
+            int digit = digits.charAt(i);
 
-        if (digits.length() > overflowResultDigits.length()) {
-            return overflowResult;
-        } else {
-            digits = "0".repeat(overflowResultDigits.length() - digits.length()) + digits;
-
-            boolean overflowPossible = true;
-
-            for (int i = 0; i < digits.length(); i++) {
-                int digit = digits.charAt(i);
-
-                if (Character.isDigit(digit)) {
-                    if (overflowPossible && (digit > overflowResultDigits.charAt(i))) {
-                        return overflowResult;
-                    } else if (digit < overflowResultDigits.charAt(i)) {
-                        overflowPossible = false;
-                    }
-
-                    int placeMultiplier = (int) Math.pow(10.0, digits.length() - i - 1);
-                    result += (digit - '0') * placeMultiplier * sign;
-                } else {
-                    return result;
-                }
+            if (Character.isDigit(digit)) {
+                result += (digit - '0') * placeMultiplier * sign;
             }
+
+            if (result > Integer.MAX_VALUE) {
+                return Integer.MAX_VALUE;
+            } else if (result < Integer.MIN_VALUE) {
+                return Integer.MIN_VALUE;
+            }
+
+            placeMultiplier *= 10;
         }
 
-        return result;
+        return (int) result;
     }
 }
