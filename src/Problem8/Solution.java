@@ -19,8 +19,7 @@ class Solution {
     public int myAtoi(String s) {
         long result = 0;
 
-        boolean foundSignIndicator = false;
-        boolean foundFirstDigit = false;
+        boolean foundFirstChar = false;
         int sign = 1;
 
         for (int i = 0; i < s.length(); i++) {
@@ -35,14 +34,14 @@ class Solution {
                     return Integer.MIN_VALUE;
                 }
 
-                foundFirstDigit = true;
-            } else if (foundSignIndicator || foundFirstDigit) {
+                foundFirstChar = true;
+            } else if (foundFirstChar) {
                 break;
             } else if (c == '-') {
                 sign = -1;
-                foundSignIndicator = true;
+                foundFirstChar = true;
             } else if (c == '+') {
-                foundSignIndicator = true;
+                foundFirstChar = true;
             } else if (c != ' ') {
                 break;
             }
