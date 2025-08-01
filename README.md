@@ -24,6 +24,12 @@ Link: https://leetcode.com/problems/merge-two-sorted-lists/description/
 
 Solution: src/problem21/Solution.kt
 
+### Problem 36 - Validate Sodoku board
+
+Link: https://leetcode.com/problems/valid-sudoku/description/
+
+Solution: src/Problem36/Solution.kt
+
 ## Java
 ### Problem 2 - Add two positive integers represented as linked lists and return result as linked list
 
